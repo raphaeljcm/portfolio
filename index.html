@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="./assets/profile.png" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <title>Raphael Marques - Portfólio</title>
+</head>
+<body>
+  <header id="mainHeader">
+    <div class="container">
+      <nav>
+        <div id="languages">
+          <button type="button" id="portuguese" class="active">PT</button>
+          <span>|</span>
+          <button type="button" id="english">EN</button>
+        </div>
+
+        <div id="menu">
+          <ul>
+            <li><a href="#hidden" class="nav">Início</a></li>
+            <li><a href="#about" class="nav">Sobre mim</a></li>
+            <li><a href="#resume" class="nav">Currículo</a></li>
+            <li><a href="#skills" class="nav">Tecnologias</a></li>
+            <li><a href="#projects" class="nav">Projetos</a></li>
+            <li><a href="#contact" class="nav">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="toggle-mode">
+          <button type="button" id="dark-mode"></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hidden" id="hidden"></div>
+
+    <section id="home">
+      <div class="container">
+        <div id="shapeHome">
+          <div id="shapeProfile">
+            <div class="image"><img src="./assets/profile.png" alt="Raphael Marques profile photo"></div>
+            <div class="content">
+              <h1>Raphael Marques</h1>
+              <p class="typeWritter">&lt;Desenvolvedor Júnior/&gt;</p>
+              <a href="#" class="button">Bora bater um papo</a>
+            </div>
+          </div>
+          <div id="description">
+            <div class="content">
+              <h2>Desenvolvimento Front-end</h2>
+              <p class="subText">Eu amo café e resolver problemas!</p>
+            </div>
+            <div class="icons">
+              <a href="mailto:raphaeljcmarques@gmail.com" target="_blank"><img src="./assets/email.svg" alt="Raphael Marques Email"></img></a>
+              <a href="https://www.linkedin.com/in/raphael-marques-682140143/" target="_blank"><img src="./assets/linkedin.svg" alt="Raphael Marques Linkedin"></img></a>
+              <a href="https://www.instagram.com/raphaeljcm_/" target="_blank"><img src="./assets/instagram.svg" alt="Raphael Marques Instagram"></img></a> 
+              <a href="https://github.com/faeelcardoso" target="_blank"><img src="./assets/github.svg" alt="Raphael Marques GitHub"></img></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <header>
+          <h2 class="title">Sobre mim</h2>
+        </header>
+        <div class="content">
+          <div class="text">
+            <h3>Fala aí, eu sou <span>Raphael Marques</span></h3>
+            <p class="subText">Sou um cara apaixonado por resolver problemas, vejo isso como um novo desafio todos os dias a ser superado. Não vou para a cama ao final do dia sem ter aprendido uma coisa nova e/ou aprimorado alguma habilidade, sou literalmente viciado em aprender</p>
+            <p class="subText">Venho estudando desenvolvimento há um tempo, porém decidi dar um passo para trás e fortalecer a base novamente, role por minha página pra conhecer um pouco mais sobre mim e o que eu tenho aprontado.</p>
+          </div>
+          <div class="imagem">
+            <img src="./assets/profileProgramming.png" alt="Raphael Marques programming">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <div class="container">
+        <header>
+          <h2 class="title">Meu currículo</h2>
+        </header>
+        <div class="wrapperBox">
+          <div class="content">
+            <h3 class="middleThin">Experiência</h3>
+            <ul class="box">
+              <li class="innerBox work">
+                <h4>Symplicity Brasil</h4>
+                <h5>Estagiário de Desenvolvimento Front-end</h5>
+                <p>Estágiario de desenvolvimento front-end, contato diário com html, css, js, jQuery, sass, acessibilidade e trabalhando junto com o time americano.</p>
+                <p>06/21 - Atual</p>
+              </li>
+              <li class="innerBox work">
+                <h4>Sotreq S/A</h4>
+                <h5>Estagiário Técnico de Sistemas e Processos</h5>
+                <p>Contato diário com VBA, testes QA relacionados ao sistema SAP, utilização do Access com o objetivo de consolidar informações de formulários,
+                  gerar relatórios mensalmente, atualizar informações de NF emitidas para Vale S/A e realizar o cadastro no portal da empresa.
+                </p>
+                <p>03/19 – 03/20</p>
+              </li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3 class="middleThin">Educação</h3>
+            <div class="box">
+              <div class="innerBox education">
+                <h4>Centro Universitário Newton Paiva</h4>
+                <h5>Bacharel, Sistemas de Informação - Bolsista Integral ProUni</h5>
+                <p>08/20 - 3º Período</p>
+              </div>
+              <div class="innerBox education">
+                <h4>Senai Fatec BH</h4>
+                <h5>Técnico, Desenvolvimento de Sistemas</h5>
+                <p>08/18 - 02/20</p>
+              </div>
+              <div class="innerBox education">
+                <h4>Centro Brasileiro de Cursos (CEBRAC)</h4>
+                <h5>Assistente Administrativo Completo</h5>
+                <p>03/16 - 09/17</p>
+              </div>
+              <div class="innerBox education">
+                <h4>Escola Móvel Sesi/Senai</h4>
+                <h5>Informática Básica</h5>
+                <p>09/17 - 10/17</p>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <h3 class="middleThin">Certificados</h3>
+            <div class="box">
+              <div class="innerBox certification">
+                <h4>Learn Figma - UI/UX Design Essential Training</h4>
+                <h5>Udemy</h5>
+                <a href="https://bit.ly/udemyDesignCertificationlink" target="_blank">Certificado<img src="./assets/external-link.svg" alt="Link to Codecademy"></a>
+              </div>
+              <div class="innerBox certification">
+                <h4>Embaixador no Projeto VUEI - 1ª Rodada</h4>
+                <h5>Centro Universitário Newton Paiva</h5>
+                <a href="https://bit.ly/vueiCertification" target="_blank">Certificado<img src="./assets/external-link.svg" alt="Link to vuei 1"></a>
+                <a href="https://bit.ly/vueiLink2" target="_blank">Certificado - 2ª lugar<img src="./assets/external-link.svg" alt="Link to vuei 2"></a>
+              </div>
+              <div class="innerBox certification">
+                <h4>HTML, CSS e JavaScript</h4>
+                <h5>ProgramadorBr</h5>
+                <a href="https://bit.ly/programadorBrCertification" target="_blank">Certificado<img src="./assets/external-link.svg" alt="Link to ProgramadorBr"></a>
+              </div>
+              <div class="innerBox certification">
+                <h4>Learn Git Course</h4>
+                <h5>Codecademy</h5>
+                <a href="https://bit.ly/codecadebyCertificate" target="_blank">Certificado<img src="./assets/external-link.svg" alt="Link to Codecademy"></a>
+              </div>
+              <div class="innerBox certification">
+                <h4>Bootcamp Full Stack Developer</h4>
+                <h5>Instituto de Gestão e Tecnologia da Informação</h5>
+                <a href="https://bit.ly/igtiCertification" target="_blank">Certificado<img src="./assets/external-link.svg" alt="Link to IGTI"></a>
+              </div>
+              <div class="innerBox certification">
+                <h4>Fluency Academy Online English Course</h4>
+                <h5>Fluency Academy</h5>
+                <a href="https://bit.ly/fluencyAcademyCertification" target="_blank">Certificado<img src="./assets/external-link.svg" alt="Link to Fluency Academy"></a>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <h3 class="middleThin">Idiomas</h3>
+            <div class="box">
+              <div class="innerBox languages" id="portuguese">
+                <h4>Português</h4>
+                <h5>Nativo</h5>
+              </div>
+              <div class="innerBox languages" id="english">
+                <h4>Inglês</h4>
+                <h5>Avançado - C1</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="skills">
+      <div class="container">
+        <header>
+          <h2 class="title">Tecnologias</h2>
+        </header>
+
+        <div class="content">
+          <div class="experience">
+            <h3 class="middleThin">Tenho experiência</h3>
+            <div class="wrapperSkills">
+              <div class="eachSkill">
+                <div class="circle">
+                  <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/techs/html.svg" alt="HTML image" id="html">
+                  </a>
+                </div>
+                <span>HTML</span>
+              </div>
+              <div class="eachSkill">
+                <div class="circle">
+                  <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/techs/css.svg" alt="CSS image" id="css">
+                  </a>
+                </div>
+                <span>CSS</span>
+              </div>
+              <div class="eachSkill">
+                <div class="circle">
+                  <a href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/techs/javascript.svg" alt="JavaScript image" id="js">
+                  </a>
+                </div>
+                <span>JavaScript</span>
+              </div>
+              <div class="eachSkill">
+                <div class="circle">
+                  <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/techs/mysql.svg" alt="MySQL image" id="mysql">
+                  </a>
+                </div>
+                <span>MySQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="studying">
+            <h3 class="middleThin">Estou estudando</h3>
+            <div class="wrapperSkills">
+              <div class="eachSkill">
+                <div class="circle">
+                  <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/techs/jquery.svg" alt="jQuery image" id="jquery">
+                  </a>
+                </div>
+                <span>jQuery</span>
+              </div>
+              <div class="eachSkill">
+                <div class="circle">
+                  <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/techs/firebase.svg" alt="Firebase image" id="firebase">
+                  </a>
+                </div>
+                <span>Firebase</span>
+              </div>
+              <div class="eachSkill">
+                <div class="circle">
+                  <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/techs/sass.svg" alt="SAAS image" id="saas">
+                  </a>
+                </div>
+                <span>SASS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <header>
+          <h2 class="title">Projetos</h2>
+        </header>
+
+        <div class="content swiper">
+          <div class="swiper-wrapper">
+            <div class="square swiper-slide">
+              <div class="smallSquare">
+                <a href="https://faeelcardoso.github.io/nlw-06-origin/" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/projects/beauty-salon.PNG" alt="Beauty Salon image">
+                </a>
+              </div>
+              <h3 class="middleThin">Beauty Salon</h3>
+              <p class="subText">Tecnologias: HTML, CSS e JS</p>
+            </div>
+            <div class="square swiper-slide">
+              <div class="smallSquare">
+                <a href="https://faeelcardoso.github.io/dev-finances-rocketseat/" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/projects/dev-finances.PNG" alt="Dev Finances image">
+                </a>
+              </div>
+              <h3 class="middleThin">Dev Finances $</h3>
+              <p class="subText">Tecnologias: HTML, CSS e JS</p>
+            </div>
+            <div class="square swiper-slide">
+              <div class="smallSquare">
+                <a href="https://faeelcardoso.github.io/Jogo-da-memoria/" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/projects/jogo-memoria.PNG" alt="Jogo da Memória image">
+                </a>
+              </div>
+              <h3 class="middleThin">Jogo da Memória</h3>
+              <p class="subText">Tecnologias: HTML, CSS e JS</p>
+            </div>
+            <div class="square swiper-slide">
+              <div class="smallSquare">
+                <a href="https://faeelcardoso.github.io/jogo-da-velha/" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/projects/jogo-velha.PNG" alt="Jogo da Velha image">
+                </a>
+              </div>
+              <h3 class="middleThin">Jogo da Velha</h3>
+              <p class="subText">Tecnologias: HTML, CSS e JS</p>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact"></section>
+    <footer></footer>
+  </main>
+
+  <!-- SWIPER LIB -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- MAIN JS -->
+  <script src="./main.js"></script>
+</body>
+</html>

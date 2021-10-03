@@ -1,0 +1,531 @@
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+a, button {
+  cursor: pointer;
+}
+button {
+  font-family: var(--title-font);
+}
+img {
+  width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+}
+
+/* --- VARIABLES --- */
+:root {
+  --header-height: 5rem;
+
+  /* COLORS */
+  --light-mode: #F3F0FF;
+  --dark-mode: hsl(250, 100%, 2%);
+  --text-color-dark-mode: rgba(33, 33, 33, .5);
+  --light-green: #00DF5E;
+  --text-gray: #828282;
+  --border-color: #333333;
+  --background-black: #212121;
+
+  --title-font: 'Open Sans', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+
+/* --- LAYOUT --- */
+body {
+  font: 400 1rem var(--body-font);
+  background-color: var(--dark-mode);
+  color: var(--light-mode);
+  -webkit-font-smoothing: antialiased; /*Funciona em mac, deixa a font mais clarinha, bacana*/
+}
+.title {
+  margin: auto;
+  font-size: 1.8rem;
+}
+.nav {
+  font: 400 1rem var(--body-font);
+  color: var(--light-mode);
+  -webkit-font-smoothing: auto;
+}
+.subText {
+  color: var(--text-gray);
+}
+.container {
+  width: 85vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.typeWritter::after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 1;
+  animation: blanking .7s infinite;
+}
+.middleThin {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+/*--- ANIMATIONS  --- */
+@keyframes blanking {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes jumping {
+  30% {
+    transform: translateY(-15%);
+  }
+  60% {
+    transform: translateY(+5%);
+  }
+  90% {
+    transform: translateY(-3%);
+  }
+}
+@keyframes moveHome {
+  0% {
+    transform: translateY(+30%);
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+/* --- HEADER --- */
+header#mainHeader {
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--dark-mode);
+  transition: .8s height ease;
+}
+header#mainHeader.scroll {
+  height: 4rem;
+  border-bottom: rgba(249, 249, 249, .1) 1px solid;
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header div#languages, 
+header div#languages button {
+  color: var(--text-color-dark-mode-1);
+  font-size: 1rem;
+}
+header div#languages button {
+  background-color: var(--dark-mode);
+  border: none;
+  transition: color .3s;
+}
+header div#languages button:hover {
+  color: var(--light-green);
+}
+header div#languages button.active {
+  font-weight: bold;
+}
+
+/* --- HEADER MENU --- */
+header ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+nav ul li {
+  text-align: center;
+}
+nav ul li a {
+  position: relative;
+  transition: color .3s;
+}
+nav ul li a:hover, 
+nav ul li a:active {
+  color: var(--light-green);
+}
+nav ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--light-green);
+
+  position: absolute;
+  bottom: -.5rem;
+  left: 0;
+
+  transition: width .3s;
+}
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* --- LIGHT/DARK MODE BUTTON --- */
+#dark-mode {
+  position: relative;
+  background-image: url(./assets/moon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 3rem;
+  width: 7.5rem;
+  border: none;
+  border-radius: 5px;
+}
+#dark-mode::after {
+  content: url(./assets/sun.svg);
+  position: absolute;
+  top: .2rem;
+  right: .2rem;
+}
+
+/* --- HOME --- */
+main {
+  margin-top: calc(var(--header-height) + 2rem);
+}
+#hidden {
+  visibility: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+#home {
+  animation: 1.5s ease moveHome;
+}
+#shapeHome {
+  height: 40.75rem;
+  background-color: var(--text-color-dark-mode);
+  border-radius: 1rem;
+
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: 35% 65%;
+}
+#shapeProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  height: 33.3rem;
+  width: 22.7rem;
+  padding: 1.5rem;
+  border-radius: 0 0 15px 15px;
+
+  position: relative;
+  left: 5.8rem;
+  background-color: var(--dark-mode);
+}
+#shapeProfile .image {
+  width: 12.3rem;
+  height: 12.3rem;
+  object-fit: cover;
+  clip-path: circle();
+}
+#shapeProfile .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+#shapeProfile div.content p {
+  color: var(--light-green);
+}
+#shapeProfile .content a.button {
+  color: var(--dark-mode);
+  background-color: var(--light-green);
+  padding: .8rem 1.4rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  transition: .4s; 
+}
+#shapeProfile .content a.button:hover {
+  background-color: var(--light-mode);
+}
+#shapeProfile .content a.button:active {
+  transform: translateY(+10%);
+}
+#description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+
+  position: relative; 
+  top: -5rem;
+}
+#description h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+#description p {
+  font-size: 1.5rem;
+}
+.icons {
+  display: flex;
+  flex-direction: row; 
+  gap: 1.5rem;
+}
+.icons img {
+  width: 2.7rem;
+  transition: .4s;
+}
+.icons img:hover {
+  transform: scale(1.2);
+}
+
+/* --- ABOUT ME --- */
+section {
+  margin: 10rem auto 0 auto;
+}
+section header {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+}
+section#about .content {
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+section#about .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 30rem;
+}
+section .text h3 {
+  font-size: 1.5rem;
+}
+section#about .text p {
+  font-size: 1.12rem;
+}
+section#about .text span {
+  color: var(--light-green);
+}
+section#about .imagem {
+  display: flex;
+  justify-content: center;
+}
+section#about .imagem img {
+  width: 40rem;
+  height: 26rem;
+}
+
+/* --- RESUME --- */
+section#resume .wrapperBox {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  justify-content: space-between;
+  gap: 15rem;
+}
+section#resume .content {
+  width: 28.2rem;
+}
+section#resume .box {
+  position: relative;
+  height: 25.6rem;
+  overflow-y: scroll;
+  margin-top: 2rem;
+  padding: 3rem 4rem;
+  background-color: var(--text-color-dark-mode);
+  border: 1px var(--border-color) solid;
+}
+section#resume .box::-webkit-scrollbar {
+  width: .4rem;
+}
+section#resume .box::-webkit-scrollbar-track {
+  background: var(--text-color-dark-mode);
+}
+section#resume .box::-webkit-scrollbar-thumb {
+  background: var(--light-green);
+  border-radius: 1rem;
+}
+section#resume .innerBox {
+  margin-bottom: 1.5rem;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+section#resume .innerBox::before {
+  content: "";
+  position: absolute;
+  background-image: url("./assets/code.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 2rem;
+  height: 2rem;
+
+  transform: translate(-145%, -15%);
+}
+section#resume .innerBox.work::before {
+  background-image: url("./assets/work-bag.svg");
+}
+section#resume .innerBox.education::before {
+  background-image: url("./assets/books.svg");
+}
+section#resume .innerBox.work::before,
+section#resume .innerBox.education::before {
+  transform: translate(-145%, -5%);
+}
+section#resume .innerBox.certification::before,
+section#resume .innerBox.languages::before {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+section#resume .innerBox h4 {
+  color: var(--light-green);
+}
+section#resume .innerBox p {
+  color: var(--text-gray);
+}
+section#resume .innerBox#portuguese::before {
+  background-image: url("./assets/brazil.svg");
+}
+section#resume .innerBox#english::before {
+  background-image: url("./assets/united-states.svg");
+}
+section#resume .innerBox#portuguese::before,
+section#resume .innerBox#english::before {
+  transform: translate(-130%, -5%);
+}
+section#resume .innerBox a {
+  color: var(--text-gray);
+  display: inline-flex;
+  align-items: center;
+}
+section#resume .innerBox a img {
+  width: 1rem;
+  margin-left: .4rem;
+  transform: translateY(-10%);
+}
+
+/* --- TECNOLOGIAS --- */
+section#skills .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+section#skills .content .wrapperSkills {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+section#skills .content .eachSkill {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+section#skills .content .eachSkill span {
+  color: var(--light-green);
+}
+section#skills .content .circle {
+  background-color: var(--background-black);
+  height: 10.2rem;
+  width: 7.8rem;
+  border-radius: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section#skills .content .circle img {
+  width: 6rem;
+  transform: translateY(-10%);
+
+  cursor: pointer;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  /* transition: .3s; */
+}
+section#skills .content .circle img:hover {
+  filter: none;
+  animation: jumping .5s ease-in-out;
+}
+section#skills .content .circle img#js {
+  width: 5rem;
+  transform: translateY(-5%);
+}
+section#skills .content .circle img#mysql {
+  width: 7rem;
+  transform: translateY(-6%);
+}
+section#skills .content .circle img#mysql {
+  width: 7rem;
+  transform: translateY(-6%);
+}
+section#skills .content .circle img#jquery {
+  width: 5rem;
+  transform: translateY(-6%);
+}
+
+/* --- PROJECTS --- */
+section#projects .content {
+  height: 23rem;
+}
+section#projects .content .square {
+  width: 21.8rem;
+  height: 19rem;
+  background-color: var(--background-black);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+section#projects .content .square .smallSquare {
+  margin-top: 1.5rem;
+}
+section#projects .content .square .smallSquare img {
+  width: 18.7rem;
+  height: 10rem;
+  object-fit: cover;
+  cursor: pointer;
+
+  transition: .4s;
+}
+section#projects .content .square .smallSquare img:hover {
+  transform: scale(1.1);
+}
+
+/* --- SWIPER --- */
+.swiper-pagination .swiper-pagination-bullet {
+  width: .85rem;
+  height: .85rem;
+  opacity: 1;
+  border: 1px solid var(--light-green);
+}
+.swiper-pagination  .swiper-pagination-bullet-active {
+  background-color: var(--light-green);
+}
