@@ -554,7 +554,6 @@ section#contact form .input {
 }
 section#contact form input,
 section#contact form textarea {
-  /* reset apperence */
   appearance: none;
   width: 100%;
   padding: 1rem 0;
@@ -563,6 +562,10 @@ section#contact form textarea {
   background-color: transparent;
   outline: none;
   color: white;
+}
+section#contact form input:focus,
+section#contact form textarea:focus {
+  border-color: var(--light-green);
 }
 section#contact form textarea {
   resize: vertical;
@@ -599,6 +602,7 @@ section#contact form .input input:valid ~ label,
 section#contact form .input textarea:focus ~ label, 
 section#contact form .input textarea:valid ~ label {
   transform: translateY(-24px);
+  color: var(--light-green);
 }
 section#contact form input[type="submit"]:hover {
   background-color: var(--light-mode);
@@ -608,23 +612,10 @@ section#contact form input[type="submit"]:active {
 }
 section#contact .input span.error {
   display: flex;
-  padding: 0;
-  background-color: rgba(255, 0, 0, 0.2);
+  transform: translateY(.5rem);
 }
 section#contact .input span.error.active {
-  border: 1px solid red;
-  padding: 0.8rem;
-}
-
-/* --- SWIPER --- */
-.swiper-pagination .swiper-pagination-bullet {
-  width: .85rem;
-  height: .85rem;
-  opacity: 1;
-  border: 1px solid var(--light-green);
-}
-.swiper-pagination  .swiper-pagination-bullet-active {
-  background-color: var(--light-green);
+  color: red;
 }
 
 /* --- FOOTER --- */
@@ -648,4 +639,15 @@ footer span {
   margin-left: .7rem;
 
   transform: translateY(+14%);
+}
+
+/* --- SWIPER --- */
+.swiper-pagination .swiper-pagination-bullet {
+  width: .85rem;
+  height: .85rem;
+  opacity: 1;
+  border: 1px solid var(--light-green);
+}
+.swiper-pagination  .swiper-pagination-bullet-active {
+  background-color: var(--light-green);
 }
