@@ -11,7 +11,7 @@ html {
 a {
   text-decoration: none;
 }
-a, button {
+a, button, input[type="submit"] {
   cursor: pointer;
 }
 button {
@@ -515,8 +515,105 @@ section#projects .content .square .smallSquare img {
 
   transition: .4s;
 }
-section#projects .content .square .smallSquare img:hover {
-  transform: scale(1.1);
+section#projects .content .square:hover {
+  border: 2px solid rgba(168,179,207,0.2);;
+}
+
+/* --- CONTACT --- */
+section#contact .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+section#contact .content .text {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  margin-top: 3rem;
+}
+section#contact .content .text p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+section#contact .content .text span {
+  color: var(--light-green);
+}
+section#contact .content .text .icons {
+  margin-top: 1rem;
+}
+
+/* --- CONTACT FORM --- */
+section#contact form {
+  background-color: var(--background-black);
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+section#contact form .input {
+  margin-bottom: 2rem;
+  position: relative;
+}
+section#contact form input,
+section#contact form textarea {
+  /* reset apperence */
+  appearance: none;
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  border-bottom: 1px solid var(--light-mode);
+  background-color: transparent;
+  outline: none;
+  color: white;
+}
+section#contact form textarea {
+  resize: vertical;
+}
+section#contact form .input label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+
+  color: var(--light-mode);
+
+  transition: .4s;
+}
+section#contact form .send {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+section#contact form input[type="submit"] {
+  color: var(--dark-mode);
+  background-color: var(--light-green);
+  padding: .8rem 1.4rem;
+  border-radius: 2rem;
+  width: 7.5rem;
+  border: none;
+  font-weight: bold;
+  font-size: .9rem;
+
+  text-align: center;
+  transition: .6s;
+}
+section#contact form .input input:focus ~ label,
+section#contact form .input input:valid ~ label,
+section#contact form .input textarea:focus ~ label, 
+section#contact form .input textarea:valid ~ label {
+  transform: translateY(-24px);
+}
+section#contact form input[type="submit"]:hover {
+  background-color: var(--light-mode);
+}
+section#contact form input[type="submit"]:active {
+  transform: translateY(+10%);
+}
+section#contact .input span.error {
+  display: flex;
+  padding: 0;
+  background-color: rgba(255, 0, 0, 0.2);
+}
+section#contact .input span.error.active {
+  border: 1px solid red;
+  padding: 0.8rem;
 }
 
 /* --- SWIPER --- */
@@ -528,4 +625,27 @@ section#projects .content .square .smallSquare img:hover {
 }
 .swiper-pagination  .swiper-pagination-bullet-active {
   background-color: var(--light-green);
+}
+
+/* --- FOOTER --- */
+footer {
+  margin-top: 5rem;
+  height: 3rem;
+  background-color: var(--background-black);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer:hover {
+  color: var(--light-green);
+}
+footer span {
+  background-image: url("./assets/coffee.svg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 1.35rem;
+  margin-left: .7rem;
+
+  transform: translateY(+14%);
 }

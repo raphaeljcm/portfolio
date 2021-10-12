@@ -15,11 +15,17 @@ const Libs = {
     mousewheel: true,
     keyboard: true,
     breakpoints: {
-      1100: {
+      766: {
+        slidesPerView: 2,
+        spaceBetween: 75,
+        mousewheel: true,
+      },
+      1024: {
         slidesPerView: 3,
         spaceBetween: 75,
+        mousewheel: true,
       },
-      1300: {
+      1440: {
         slidesPerView: 4,
         spaceBetween: 75,
         mousewheel: false,
