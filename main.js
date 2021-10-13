@@ -1,5 +1,6 @@
 const SHADOW_HEADER = "scroll";
 const ERROR_EXISTS = "active";
+const ERROR_NOT_EXISTS = "passed";
 
 const header = document.querySelector("header");
 const pTypeWritter = document.querySelector(".typeWritter");
@@ -81,7 +82,11 @@ function restartTypeWritter() {
 // FORM VALIDATION
 function startingFormValidation() {
   form.addEventListener("submit", e => {
-    e.preventDefault();
+    if(canISend()) {
+      showThumbsUp();
+    } else {
+      e.preventDefault();
+    }
   });
 
   // found an invalid element
@@ -117,23 +122,35 @@ function validateField(field) {
         foundError = error;
       }
     }
-
+    
     return foundError;
   }
 
   function customMessage(typeError) {
-    const messages = {
+    const inputMessages = {
       text: {
         valueMissing: "Por favor, preencha este campo",
       },
       email: {
         valueMissing: "Email é obrigatório",
         typeMismatch: "Por favor, preencha um email válido",
-      },
-    } 
+      }
+    }
+    
+    const textareaMessage = {
+      mensagem: {
+        valueMissing: "Escreva alguma mensagem",
+      }
+    }
 
     // MAAAAAAN, THIS GOT INSANE REALLY!!!
-    return messages[field.type][typeError]; 
+    const whatIsThis = field.parentNode.querySelector("Label").textContent;
+    
+    if(whatIsThis == "Mensagem") {
+      return textareaMessage[field.name.toLowerCase()][typeError];
+    } else {
+      return inputMessages[field.type][typeError];
+    }
   }
 
   function setCustomMessage(message) {
@@ -163,9 +180,28 @@ function validateField(field) {
       }
     } else {
       field.style.borderColor = "green";
+      field.setAttribute("data-error", ERROR_NOT_EXISTS);
       setCustomMessage();
     }
   };
+}
+
+function canISend() {
+  let result;
+
+  fields.forEach(field => {
+    if(!field.dataset.error) {
+      result = false;
+    } 
+  });
+  
+  return result == false ? false : true; 
+}
+
+function showThumbsUp() {
+  alert("Enviado amiguinho!");
+  // CONTINUE FROM HERE, MAYBE PUT AN IMG "THUBS UP" TELLING THE USER THAT THE MESSAGE WAS SENT
+  // great work today!
 }
 
 // STARTING EVERYTHING!

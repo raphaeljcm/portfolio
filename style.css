@@ -595,7 +595,7 @@ section#contact form input[type="submit"] {
   font-size: .9rem;
 
   text-align: center;
-  transition: .6s;
+  transition: .3s;
 }
 section#contact form .input input:focus ~ label,
 section#contact form .input input:valid ~ label,
