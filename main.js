@@ -25,11 +25,16 @@ const Libs = {
         mousewheel: true,
       },
       1024: {
+        slidesPerView: 2,
+        spaceBetween: 75,
+        mousewheel: true,
+      },
+      1480: {
         slidesPerView: 3,
         spaceBetween: 75,
         mousewheel: true,
       },
-      1440: {
+      1800: {
         slidesPerView: 4,
         spaceBetween: 75,
         mousewheel: false,
@@ -200,8 +205,6 @@ function canISend() {
 
 function showThumbsUp() {
   alert("Enviado amiguinho!");
-  // CONTINUE FROM HERE, MAYBE PUT AN IMG "THUBS UP" TELLING THE USER THAT THE MESSAGE WAS SENT
-  // great work today!
 }
 
 // STARTING EVERYTHING!

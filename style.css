@@ -651,3 +651,39 @@ footer span {
 .swiper-pagination  .swiper-pagination-bullet-active {
   background-color: var(--light-green);
 }
+
+/* --- MEDIA QUERIES --- */
+@media screen and (max-width: 1480px) {
+  section#skills .content {
+    justify-items: end;
+  }
+  section#skills .content .eachSkill {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) { /*continue from here... Remember to fix #resume width */
+  section#about .content .text {
+    max-width: 25rem;
+  }
+  section#about .content .imagem img {
+    width: 100%;
+    height: 100%;
+  }
+  section#resume .wrapperBox {
+    gap: 8rem;
+  }
+  section#resume .content {
+    width: 23.2rem;
+  }
+  section#skills .content {
+    grid-template: repeat(2, auto) / repeat(1, auto);
+    justify-content: center;
+    align-items: center;
+    justify-items: normal;
+    gap: 5rem;
+  }
+  section#contact .content .text {
+    max-width: 25rem;
+  }
+}
