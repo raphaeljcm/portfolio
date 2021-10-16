@@ -65,6 +65,7 @@ body {
   width: 85vw;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
 .typeWritter::after {
   content: "|";
@@ -76,6 +77,9 @@ body {
   text-align: center;
   font-size: 1.3rem;
   font-weight: 400;
+}
+.toggle { /* CONTINUE FROM HERE */
+  display: none;
 }
 
 /*--- ANIMATIONS  --- */
@@ -130,6 +134,8 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  opacity: 1;
+  visibility: visible;
 }
 header div#languages, 
 header div#languages button {
@@ -139,7 +145,7 @@ header div#languages button {
 header div#languages button {
   background-color: var(--dark-mode);
   border: none;
-  transition: color .3s;
+  transition: color .5s;
 }
 header div#languages button:hover {
   color: var(--light-green);
@@ -260,7 +266,7 @@ main {
   padding: .8rem 1.4rem;
   margin-top: 1rem;
   border-radius: 2rem;
-  transition: .4s; 
+  transition: .5s; 
 }
 #shapeProfile .content a.button:hover {
   background-color: var(--light-mode);
@@ -641,6 +647,8 @@ footer span {
   transform: translateY(+14%);
 }
 
+/* --- MODAL --- */
+
 /* --- SWIPER --- */
 .swiper-pagination .swiper-pagination-bullet {
   width: .85rem;
@@ -662,7 +670,45 @@ footer span {
   }
 }
 
-@media screen and (max-width: 1024px) { /*continue from here... Remember to fix #resume width */
+@media screen and (max-width: 1280px) { 
+  section#home .container #shapeHome {
+    grid-template: repeat(2, auto)/ repeat(1, auto);
+    flex-direction: row;
+    background-color: transparent;
+    justify-items: center;
+  }
+  .a1 {
+    order: 0;
+  }
+  .a2 {
+    order: 1;
+  }
+  section#home .container #shapeHome #description {
+    margin-top: 6rem;
+    gap: 0;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  section#home .container #shapeHome #description .content {
+    text-align: start;
+  }
+  section#home .container #shapeHome #description .content p {
+    display: inline;
+  }
+  section#home .container #shapeHome #description .icons {
+    position: absolute;
+    transform: translate(+80%, +20%);
+  }
+  section#home .container #shapeHome #shapeProfile {
+    flex-direction: row;
+    height: 22.7rem;
+    width: 80%;
+    border: 1px solid var(--light-green);
+    border-radius: 2rem;
+    left: 0;
+    gap: 0;
+    justify-content: space-around;
+  }
   section#about .content .text {
     max-width: 25rem;
   }
@@ -685,5 +731,14 @@ footer span {
   }
   section#contact .content .text {
     max-width: 25rem;
+  }
+}
+
+@media screen and (max-width: 768px) { /*Continue from here*/
+  nav #menu {
+    opacity: 0;
+    display: none;
+    top: -10rem;
+    transition: .3s;
   }
 }
