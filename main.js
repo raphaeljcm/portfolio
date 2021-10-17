@@ -1,11 +1,15 @@
 const SHADOW_HEADER = "scroll";
 const ERROR_EXISTS = "active";
 const ERROR_NOT_EXISTS = "passed";
+const MENU = "show";
+const MENU_ACTIVE = "active";
 
 const header = document.querySelector("header");
 const pTypeWritter = document.querySelector(".typeWritter");
 const form = document.querySelector("form");
 const fields = document.querySelectorAll("[required]");
+const containerHome = document.querySelector("#mainHeader .container");
+const sections = document.querySelectorAll("main section[id]");
 
 // Using libs
 const Libs = {
@@ -43,6 +47,14 @@ const Libs = {
 }),
 }
 
+function toggleMenu() {
+  containerHome.classList.toggle(MENU);
+}
+
+function removeMenu() {
+  containerHome.classList.remove(MENU);
+}
+
 // shadow on header when scrolling 
 function changeHeader() {
   const navHeight = header.offsetHeight; // deslocamento da altura do header, o tamanho do header incluindo borda e padding
@@ -58,6 +70,27 @@ function changeHeader() {
 function scrollEffects() {
   window.addEventListener("scroll", () => {
     changeHeader();
+    activateMenuOnSection();
+  });
+}
+
+function activateMenuOnSection() {
+  // checkpoint = decolamento Y da janela + metade da altura da janela
+  const checkpoint = window.pageYOffset + (window.innerHeight / 6) * 2;
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute("id");
+
+    const checkpointStart = checkpoint >= sectionTop;
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight;
+
+    if(checkpointStart && checkpointEnd) {
+      document.querySelector("nav #menu ul li a[href*="+sectionId+"]").classList.add(MENU_ACTIVE);
+    } else {
+      document.querySelector("nav #menu ul li a[href*="+sectionId+"]").classList.remove(MENU_ACTIVE);
+    }
   });
 }
 
