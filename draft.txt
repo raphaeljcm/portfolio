@@ -1,6 +1,4 @@
 Things to add:
 - meta datas
-- autocomplete, autofocus on inputs form and improve with some new attributes
-- label without for
 - remove comment from mailchimps
 - correct the form, it's able to submit even if a required input is empty
