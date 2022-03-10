@@ -121,7 +121,7 @@ function restartTypeWritter() {
 function startingFormValidation() {
   form.addEventListener("submit", e => {
     if(canISend()) {
-      showThumbsUp();
+      firestoreFunctions.createANewMessage();
     } else {
       e.preventDefault();
     }
@@ -234,10 +234,6 @@ function canISend() {
   });
   
   return result == false ? false : true; 
-}
-
-function showThumbsUp() {
-  alert("Enviado amiguinho!");
 }
 
 // STARTING EVERYTHING!
