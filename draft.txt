@@ -1,4 +1,8 @@
 Things to add:
+- update everything that I need to update (I think it is done, I guess is better haha)
+- make the layout responsive
+- light theme
+- page in English
+- take care of accessibility
+- tab-index
 - meta datas
-- remove comment from mailchimps
-- correct the form, it's able to submit even if a required input is empty

@@ -19,8 +19,12 @@ const Libs = {
     slidesPerView: 1,
     pagination: {
       el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
     },
-    mousewheel: true,
+    mousewheel: {
+      invert: true,
+    },
     keyboard: true,
     breakpoints: {
       766: {
@@ -121,6 +125,7 @@ function restartTypeWritter() {
 function startingFormValidation() {
   form.addEventListener("submit", e => {
     if(canISend()) {
+      e.preventDefault();
       firestoreFunctions.createANewMessage();
     } else {
       e.preventDefault();
