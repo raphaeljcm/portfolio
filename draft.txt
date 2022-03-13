@@ -6,3 +6,4 @@ Things to add:
 - take care of accessibility
 - tab-index
 - meta datas
+- maybe put a button to scroll right to the top of the page
