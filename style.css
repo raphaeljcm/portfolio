@@ -125,6 +125,20 @@ body {
   }
 }
 
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes swing { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(30deg); }
+} 
+
 /* --- HEADER --- */
 header#mainHeader {
   height: var(--header-height);
@@ -203,21 +217,44 @@ nav ul li a.active::after {
 }
 
 /* --- LIGHT/DARK MODE BUTTON --- */
-#dark-mode {
-  position: relative;
-  background-image: url(./assets/moon.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.wrapper-toggle {
+  width: 7rem;
   height: 3rem;
-  width: 7.5rem;
-  border: none;
-  border-radius: 5px;
+  background-color: var(--dark-mode);
+  border-radius: 3.75rem;
+  padding: .5rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
-#dark-mode::after {
-  content: url(./assets/sun.svg);
+
+.wrapper-toggle img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.wrapper-toggle .ball {
   position: absolute;
-  top: .2rem;
-  right: .2rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  background-color: var(--light-mode);
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.ball.moon {
+  transform: translateX(3.7rem);
+}
+
+.wrapper-toggle #moon:hover {
+  animation: swing 1s ease-in-out infinite alternate;
+}
+
+.wrapper-toggle #sun:hover {
+  animation: rotate 4s linear infinite;
 }
 
 /* --- HOME --- */
@@ -672,6 +709,33 @@ footer span {
   background-color: var(--light-green);
 }
 
+/* ARROW UP */
+a.back-to-top img {
+  width: 25px;
+  height: 25px;
+}
+.back-to-top {
+  background-color: #00df5dc9;
+
+  position: fixed;
+  right: 1.3rem;
+  bottom: 3rem;
+  padding: .8rem;
+  clip-path: circle();
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: .3s;
+  transform: translateY(100%);
+  z-index: 10;
+}
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* --- MEDIA QUERIES --- */
 @media screen and (max-width: 1480px) {
   section#skills .content {
@@ -743,6 +807,12 @@ footer span {
   }
   section#contact .content .text {
     max-width: 25rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section#home {
+    margin: 5rem auto 0 auto;
   }
 }
 
@@ -834,32 +904,6 @@ footer span {
     max-width: 20rem;
   }
 }
-/* ARROW UP */
-a.back-to-top img {
-  width: 25px;
-  height: 25px;
-}
-.back-to-top {
-  background-color: #00df5dc9;
-
-  position: fixed;
-  right: 1.3rem;
-  bottom: 3rem;
-  padding: .8rem;
-  clip-path: circle();
-
-  visibility: hidden;
-  opacity: 0;
-
-  transition: .3s;
-  transform: translateY(100%);
-  z-index: 10;
-}
-.back-to-top.show {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
 
 @media screen and (max-width: 770px) {
   section#about .content {
@@ -878,6 +922,13 @@ a.back-to-top img {
 @media screen and (max-width: 600px) {
   html {
     font-size: 90%;
+  }
+  .toggle {
+    width: 2rem;
+    height: 2rem;
+  }
+  section#home {
+    margin: 10rem auto 0 auto;
   }
   section#home .container {
     width: 90vw;

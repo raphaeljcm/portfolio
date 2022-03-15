@@ -1,9 +1,6 @@
 Things to add:
-- update everything that I need to update (I think it is done, I guess is better haha)
-- make the layout responsive
-- light theme
+- make theme switcher works
 - page in English
 - take care of accessibility
 - tab-index
 - meta datas
-- maybe put a button to scroll right to the top of the page

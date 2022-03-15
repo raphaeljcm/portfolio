@@ -276,12 +276,21 @@ function scrollEffects() {
   });
 }
 
+function timeSwitcher() {
+  const ball = document.getElementById('ball');
+
+  ball.addEventListener('click', () => {
+    ball.classList.toggle('moon');
+  });
+}
+
 // STARTING EVERYTHING!
 function init() {
   scrollEffects();
   typeWritterEffect(pTypeWritter, restartTypeWritter);
   startingFormValidation();
   changeColorLink();
+  timeSwitcher();
 }
 
 init();
