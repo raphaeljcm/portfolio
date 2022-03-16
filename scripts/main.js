@@ -280,7 +280,13 @@ function timeSwitcher() {
   const ball = document.getElementById('ball');
 
   ball.addEventListener('click', () => {
-    ball.classList.toggle('moon');
+    if(ball.getAttribute('class').includes('moon')) {
+      ball.classList.remove('moon');
+      ball.classList.add('sun');
+    } else {
+      ball.classList.remove('sun');
+      ball.classList.add('moon');
+    }
   });
 }
 

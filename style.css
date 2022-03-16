@@ -37,6 +37,7 @@ ul {
   --text-gray: #828282;
   --border-color: #333333;
   --background-black: #212121;
+  --purple-light-text: #3700FF;
 
   --title-font: 'Open Sans', sans-serif;
   --body-font: 'DM Sans', sans-serif;
@@ -119,6 +120,15 @@ body {
 @keyframes moveHome {
   0% {
     transform: translateY(+30%);
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveHomeCellphone {
+  0% {
+    transform: translateY(+15%);
     opacity: 0;
   } 100% {
     opacity: 1;
@@ -220,7 +230,8 @@ nav ul li a.active::after {
 .wrapper-toggle {
   width: 7rem;
   height: 3rem;
-  background-color: var(--dark-mode);
+  background-color: #081624;
+  /* 0e1f38 */
   border-radius: 3.75rem;
   padding: .5rem;
   
@@ -753,10 +764,10 @@ a.back-to-top img {
     background-color: transparent;
     justify-items: center;
   }
-  .a1 {
+  .order1 {
     order: 0;
   }
-  .a2 {
+  .order2 {
     order: 1;
   }
   section#home .container #shapeHome #description {
@@ -843,6 +854,8 @@ a.back-to-top img {
     display: grid;
     place-content: center;
     z-index: 1;
+
+    transition: 1s;
   }
   #mainHeader .container.show #menu ul {
     display: grid;
@@ -862,7 +875,7 @@ a.back-to-top img {
     opacity: 0;
 
     position: absolute;
-    right: 3.5rem;
+    right: 2.5rem;
     top: -1.5rem;
 
     transition: .3s;
@@ -871,11 +884,8 @@ a.back-to-top img {
     visibility: hidden;
     opacity: 0;
 
-    position: absolute;
-    right: 3.5rem;
-    top: -1.5rem;
-
-    transition: 1s;
+    position: relative;
+    top: -10rem;
   }
   #mainHeader .container.show .toggle.icon-close {
     visibility: visible;
@@ -929,6 +939,7 @@ a.back-to-top img {
   }
   section#home {
     margin: 10rem auto 0 auto;
+    animation: 1.5s ease moveHomeCellphone;
   }
   section#home .container {
     width: 90vw;
@@ -945,11 +956,15 @@ a.back-to-top img {
     gap: 2rem;
     align-items: center;
   } 
-
+  
   section#home .container #shapeHome #description .content {
     text-align: center;
   }
 
+  section#home .container #shapeHome #description .content h2 {
+    font-size: 2.7rem;
+  }
+  
   section#home .container #shapeHome #description .icons {
     position: relative;
     transform: none;
@@ -988,5 +1003,6 @@ a.back-to-top img {
 
   footer {
     margin-top: 3rem;
+    font-size: .9rem;
   }
 }
