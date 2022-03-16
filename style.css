@@ -875,7 +875,7 @@ a.back-to-top img {
     opacity: 0;
 
     position: absolute;
-    right: 2.5rem;
+    right: 2rem;
     top: -1.5rem;
 
     transition: .3s;
@@ -951,7 +951,7 @@ a.back-to-top img {
   }
 
   section#home .container #shapeHome #description {
-    margin-top: 4rem;
+    margin-top: 1rem;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
