@@ -133,8 +133,7 @@ function restartTypeWritter() {
 function startingFormValidation() {
   form.addEventListener("submit", e => {
     if(canISend()) {
-      e.preventDefault();
-      firestoreFunctions.createANewMessage();
+      // move to confirmation page
     } else {
       e.preventDefault();
     }
