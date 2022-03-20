@@ -53,12 +53,26 @@ const Libs = {
 }),
 }
 
+
+
 function toggleMenu() {
-  containerHome.classList.toggle(MENU);
+  const menuToggle = document.querySelectorAll('.toggle');
+
+  menuToggle.forEach(each => {
+    each.addEventListener('click', () => {
+      containerHome.classList.toggle(MENU);
+    });
+  });
 }
 
 function removeMenu() {
-  containerHome.classList.remove(MENU);
+  const navRemoveMenu = document.querySelectorAll('.nav');
+
+  navRemoveMenu.forEach(each => {
+    each.addEventListener('click', () => {
+      containerHome.classList.remove(MENU);
+    });
+  });
 }
 
 // shadow on header when scrolling 
@@ -338,6 +352,8 @@ function init() {
   changeColorLink();
   timeSwitcher();
   checkLanguage();
+  toggleMenu();
+  removeMenu();
 }
 
 init();
