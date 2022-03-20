@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Here you will find almost everything my professional life, check it out!",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raphaeljcm/portfolio"
+  },
+  "keywords": [],
+  "author": "Raphael Marques",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.9.2",
+    "mini-css-extract-plugin": "^2.0.0",
+    "css-loader": "^6.0.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.0",
+    "cross-env": "^7.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/faeelcardoso/portfolio/issues"
+  },
+  "homepage": "https://raphaeljcm.github.io/portfolio/",
+  "dependencies": {
+    "terser-webpack-plugin": "^4.0.0"
+  }
+}

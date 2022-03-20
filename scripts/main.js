@@ -11,6 +11,8 @@ const fields = document.querySelectorAll("[required]");
 const containerHome = document.querySelector("#mainHeader .container");
 const sections = document.querySelectorAll("main section[id]");
 
+import "../style.css";
+
 // Using libs
 const Libs = {
   // Carousel slider -> swiper lib
@@ -238,15 +240,19 @@ function changeColorLink() {
 
   imgLinks.forEach(img => {
     img.addEventListener('mouseover', () => {
-      img.setAttribute('src', './assets/external-link-white.svg');
-      img.parentElement.style.color = 'white';
+      if(document.documentElement.className === 'dark-mode') {
+        img.setAttribute('src', './assets/external-link-white.svg');
+        img.parentElement.style.color = 'white';
+      }
     });
   });
 
   imgLinks.forEach(img => {
     img.addEventListener('mouseleave', () => {
-      img.setAttribute('src', './assets/external-link.svg');
-      img.parentElement.style.color = '#828282';
+      if(document.documentElement.className === 'dark-mode') {
+        img.setAttribute('src', './assets/external-link.svg');
+        img.parentElement.style.color = '#828282';
+      }
     });
   });
 }
@@ -279,15 +285,49 @@ function scrollEffects() {
 function timeSwitcher() {
   const ball = document.getElementById('ball');
 
-  ball.addEventListener('click', () => {
-    if(ball.getAttribute('class').includes('moon')) {
-      ball.classList.remove('moon');
-      ball.classList.add('sun');
-    } else {
+  // to set the theme on initial load
+  if(localStorage.getItem('theme') === 'dark-mode' || localStorage.getItem('theme') == undefined) {
+    setTheme('dark-mode', 'moon');
+  } else {
+    setTheme('light-mode', 'sun');
+  }
+
+  // function to set a given theme/color-scheme
+  function setTheme(themeName, ballTheme) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+
+    if(ballTheme === 'moon') {
       ball.classList.remove('sun');
       ball.classList.add('moon');
+    } else {
+      ball.classList.remove('moon');
+      ball.classList.add('sun');
     }
-  });
+  }
+
+  // to toggle between the themes
+  ball.addEventListener('click', () => {
+    if(ball.getAttribute('class').includes('moon')) {
+      setTheme('light-mode', 'sun');
+    } else {
+      setTheme('dark-mode', 'moon');
+    }
+  }); 
+}
+
+function checkLanguage() {
+  const htmlEl = document.documentElement.getAttribute('lang');
+  const ptElement = document.getElementById('portuguese');
+  const enElement = document.getElementById('english');
+
+  if(htmlEl === 'en') {
+    ptElement.classList.remove('active');
+    enElement.classList.add('active');
+  } else {
+    ptElement.classList.add('active');
+    enElement.classList.remove('active');
+  }
 }
 
 // STARTING EVERYTHING!
@@ -297,6 +337,7 @@ function init() {
   startingFormValidation();
   changeColorLink();
   timeSwitcher();
+  checkLanguage();
 }
 
 init();

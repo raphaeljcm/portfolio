@@ -1,6 +1,0 @@
-Things to add:
-- make theme switcher works
-- page in English
-- take care of accessibility(ARIA, webpack to have everything compressed, keyboard navigation for the whole website...)
-- tab-index
-- meta datas
