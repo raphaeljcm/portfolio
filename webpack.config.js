@@ -6,9 +6,9 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: modoDev ? 'development' : 'production',
-  entry: ['./scripts/firestore.js', './scripts/main.js'],
+  entry: './scripts/main.js',
   output: {
-    filename: 'index.js',
+    filename: '[name].bundle.js',
     path: __dirname + '/production'
   },
   optimization: {

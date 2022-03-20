@@ -27,7 +27,8 @@
   <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   
   <!-- MAIN JS -->
-  <script defer src="./production/index.js"></script>
+  <script defer src="./production/main.bundle.js"></script> 
+  <script defer src="./scripts/firestore.js"></script>
 
   <title>Raphael Marques &#124; Portfólio</title>
 </head>
@@ -58,8 +59,8 @@
           <div tabindex="0" class="ball moon" id="ball"></div>
         </div>
 
-        <div class="toggle icon-menu"><img src="./assets/hamburguer-icon.svg" alt="Icone de hamburguer"></div>
-        <div class="toggle icon-close"><img src="./assets/close.svg" alt="Icone parar fechar o menu"></div>
+        <div class="toggle icon-menu"><img id="menu-icon" src="./assets/hamburguer-icon.svg" alt="Icone de hamburguer"></div>
+        <div class="toggle icon-close"><img id="close-icon" src="./assets/close.svg" alt="Icone parar fechar o menu"></div>
       </nav>
     </div>
   </header>

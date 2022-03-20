@@ -302,8 +302,10 @@ function timeSwitcher() {
   // to set the theme on initial load
   if(localStorage.getItem('theme') === 'dark-mode' || localStorage.getItem('theme') == undefined) {
     setTheme('dark-mode', 'moon');
+    changingIconsColor('dark-mode');
   } else {
     setTheme('light-mode', 'sun');
+    changingIconsColor('light-mode');
   }
 
   // function to set a given theme/color-scheme
@@ -314,9 +316,11 @@ function timeSwitcher() {
     if(ballTheme === 'moon') {
       ball.classList.remove('sun');
       ball.classList.add('moon');
+      changingIconsColor('dark-mode');
     } else {
       ball.classList.remove('moon');
       ball.classList.add('sun');
+      changingIconsColor('light-mode');
     }
   }
 
@@ -324,8 +328,10 @@ function timeSwitcher() {
   ball.addEventListener('click', () => {
     if(ball.getAttribute('class').includes('moon')) {
       setTheme('light-mode', 'sun');
+      changingIconsColor('light-mode');
     } else {
       setTheme('dark-mode', 'moon');
+      changingIconsColor('dark-mode');
     }
   }); 
 }
@@ -341,6 +347,19 @@ function checkLanguage() {
   } else {
     ptElement.classList.add('active');
     enElement.classList.remove('active');
+  }
+}
+
+function changingIconsColor(theme) {
+  const menuIcon = document.querySelector('#menu-icon');
+  const closeIcon = document.querySelector('#close-icon');
+
+  if(theme === 'light-mode') {
+    menuIcon.setAttribute('src', './assets/hamburguer-icon-light.svg');
+    closeIcon.setAttribute('src', './assets/close-light.svg');
+  } else {
+    menuIcon.setAttribute('src', './assets/hamburguer-icon.svg');
+    closeIcon.setAttribute('src', './assets/close.svg');
   }
 }
 

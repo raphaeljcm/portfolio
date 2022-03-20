@@ -26,7 +26,8 @@
   <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   
   <!-- MAIN JS -->
-  <script defer src="./production/index.js"></script>
+  <script defer src="./production/main.bundle.js"></script>
+  <script defer src="./scripts/firestore.js"></script>
 
   <title>Raphael Marques &#124; Portfolio</title>
 </head>
@@ -42,12 +43,12 @@
 
         <div id="menu">
           <ul>
-            <li><a href="#home" class="nav" onclick="removeMenu()">Home</a></li>
-            <li><a href="#about" class="nav" onclick="removeMenu()">About</a></li>
-            <li><a href="#resume" class="nav" onclick="removeMenu()">Resume</a></li>
-            <li><a href="#skills" class="nav" onclick="removeMenu()">Technologies</a></li>
-            <li><a href="#projects" class="nav" onclick="removeMenu()">Projects</a></li>
-            <li><a href="#contact" class="nav" onclick="removeMenu()">Contact</a></li>
+            <li><a href="#home" class="nav">Home</a></li>
+            <li><a href="#about" class="nav">About</a></li>
+            <li><a href="#resume" class="nav">Resume</a></li>
+            <li><a href="#skills" class="nav">Technologies</a></li>
+            <li><a href="#projects" class="nav">Projects</a></li>
+            <li><a href="#contact" class="nav">Contact</a></li>
           </ul>
         </div>
 
@@ -57,8 +58,8 @@
           <div tabindex="0" class="ball moon" id="ball"></div>
         </div>
 
-        <div class="toggle icon-menu" onclick="toggleMenu()"><img src="./assets/hamburguer-icon.svg" alt="hamburguer icon"></div>
-        <div class="toggle icon-close" onclick="toggleMenu()"><img src="./assets/close.svg" alt="close icon"></div>
+        <div class="toggle icon-menu"><img id="menu-icon" src="./assets/hamburguer-icon.svg" alt="hamburguer icon"></div>
+        <div class="toggle icon-close"><img id="close-icon" src="./assets/close.svg" alt="close icon"></div>
       </nav>
     </div>
   </header>
