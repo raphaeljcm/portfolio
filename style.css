@@ -825,7 +825,7 @@ div.back-to-top img {
   }
   section#home .container #shapeHome #description .icons {
     position: absolute;
-    transform: translate(+95%, +85%);
+    transform: translate(+103%, +27%);
   }
   section#home .container #shapeHome #shapeProfile {
     flex-direction: row;
