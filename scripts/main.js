@@ -70,7 +70,7 @@ const Libs = {
       this.scrollReveal.reveal(`section#skills .studying`, { interval: 500, origin: 'right', delay: 300 });
       this.scrollReveal.reveal(`section#projects > div`, { interval: 500 });
       this.scrollReveal.reveal(`section#contact .text`, { interval: 500, origin: 'left' });
-      this.scrollReveal.reveal(`section#contact form`, { interval: 500, origin: 'bottom', delay: 300 });
+      // this.scrollReveal.reveal(`section#contact form`, { interval: 500, origin: 'bottom', delay: 300 });
     }
   }
 }
