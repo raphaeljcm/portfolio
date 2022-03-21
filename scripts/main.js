@@ -51,9 +51,29 @@ const Libs = {
       }
     }
 }),
+  scrollRevealLib: {
+    scrollReveal: ScrollReveal({ // ScrollReveal(options I want to use instead of the defaults)
+      origin: 'top',
+      distance: '30px',
+      duration: 1000,
+      reset: true,
+    }),
+
+    startReveal() {
+      this.scrollReveal.reveal(`section#about .content .text`, { interval: 500, origin: 'left' });
+      this.scrollReveal.reveal(`section#about .content .imagem`, { interval: 500, origin: 'right', delay: 300 });
+      this.scrollReveal.reveal(`section#resume #experience`, { interval: 500, origin: 'left' });
+      this.scrollReveal.reveal(`section#resume #education`, { interval: 500, origin: 'right', delay: 300 });
+      this.scrollReveal.reveal(`section#resume #certification`, { interval: 500, origin: 'left' });
+      this.scrollReveal.reveal(`section#resume #language`, { interval: 500, origin: 'right', delay: 300 });
+      this.scrollReveal.reveal(`section#skills .experience`, { interval: 500, origin: 'left' });
+      this.scrollReveal.reveal(`section#skills .studying`, { interval: 500, origin: 'right', delay: 300 });
+      this.scrollReveal.reveal(`section#projects > div`, { interval: 500 });
+      this.scrollReveal.reveal(`section#contact .text`, { interval: 500, origin: 'left' });
+      this.scrollReveal.reveal(`section#contact form`, { interval: 500, origin: 'right', delay: 300 });
+    }
+  }
 }
-
-
 
 function toggleMenu() {
   const menuToggle = document.querySelectorAll('.toggle');
@@ -403,6 +423,7 @@ function init() {
   checkLanguage();
   toggleMenu();
   removeMenu();
+  Libs.scrollRevealLib.startReveal();
 }
 
 init();
