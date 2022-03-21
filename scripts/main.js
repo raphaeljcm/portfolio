@@ -134,7 +134,6 @@ function startingFormValidation() {
   form.addEventListener("submit", e => {
     if(canISend()) {
       // redirect to thanks page
-      // clearFields();
     } else {
       e.preventDefault();
     }
@@ -178,6 +177,8 @@ function validateField(field) {
   }
 
   function customMessage(typeError) {
+    const currentLanguage = document.documentElement.getAttribute('lang');
+
     const inputMessages = {
       text: {
         valueMissing: "Por favor, preencha este campo",
@@ -185,6 +186,18 @@ function validateField(field) {
       email: {
         valueMissing: "Email é obrigatório",
         typeMismatch: "Por favor, preencha um email válido",
+        patternMismatch: "Por favor, preencha um email válido"
+      }
+    }
+
+    const inputMessagesEn = {
+      text: {
+        valueMissing: "Please, fill this field in",
+      },
+      email: {
+        valueMissing: "Email is required",
+        typeMismatch: "please, type a valid email",
+        patternMismatch: "please, type a valid email"
       }
     }
     
@@ -194,13 +207,27 @@ function validateField(field) {
       }
     }
 
+    const textareaMessageEn = {
+      mensagem: {
+        valueMissing: "Write some message",
+      }
+    }
+
     // MAAAAAAN, THIS GOT INSANE REALLY!!!
     const whatIsThis = field.parentNode.querySelector("Label").textContent;
     
-    if(whatIsThis == "Mensagem") {
-      return textareaMessage[field.name.toLowerCase()][typeError];
-    } else {
-      return inputMessages[field.type][typeError];
+    if(currentLanguage === 'pt-br') {
+      if(whatIsThis == "Mensagem") {
+        return textareaMessage[field.name.toLowerCase()][typeError];
+      } else {
+        return inputMessages[field.type][typeError];
+      }
+    } else if(currentLanguage == 'en') {
+        if(whatIsThis == "Message") {
+          return textareaMessageEn[field.name.toLowerCase()][typeError];
+        } else {
+          return inputMessagesEn[field.type][typeError];
+        }
     }
   }
 
@@ -225,7 +252,7 @@ function validateField(field) {
       field.style.borderColor = "red";
       setCustomMessage(message);
 
-      if(error == "typeMismatch") {
+      if(error == "typeMismatch" || error == "patternMismatch") {
         const label = field.parentNode.querySelector("label");
         label.style.transform = "translateY(-24px)";
       }
