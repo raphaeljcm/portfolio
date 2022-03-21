@@ -378,7 +378,6 @@ main {
   display: flex;
   flex-direction: row; 
   gap: 1.5rem;
-  margin-bottom: 2rem;
 }
 .icons img {
   width: 2.7rem;
@@ -641,6 +640,7 @@ section#contact .content .text span {
 }
 section#contact .content .text .icons {
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* --- CONTACT FORM --- */
@@ -664,7 +664,7 @@ section#contact form textarea {
   border-bottom: 1px solid var(--secondary-color);
   background-color: transparent;
   outline: none;
-  color: white;
+  color: var(--secondary-color);
 }
 section#contact form input:focus,
 section#contact form textarea:focus {

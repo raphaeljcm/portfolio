@@ -133,7 +133,8 @@ function restartTypeWritter() {
 function startingFormValidation() {
   form.addEventListener("submit", e => {
     if(canISend()) {
-      // move to confirmation page
+      // redirect to thanks page
+      // clearFields();
     } else {
       e.preventDefault();
     }
