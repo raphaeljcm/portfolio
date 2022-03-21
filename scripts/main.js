@@ -60,17 +60,17 @@ const Libs = {
     }),
 
     startReveal() {
-      this.scrollReveal.reveal(`section#about .content .text`, { interval: 500, origin: 'left' });
-      this.scrollReveal.reveal(`section#about .content .imagem`, { interval: 500, origin: 'right', delay: 300 });
-      this.scrollReveal.reveal(`section#resume #experience`, { interval: 500, origin: 'left' });
-      this.scrollReveal.reveal(`section#resume #education`, { interval: 500, origin: 'right', delay: 300 });
-      this.scrollReveal.reveal(`section#resume #certification`, { interval: 500, origin: 'left' });
-      this.scrollReveal.reveal(`section#resume #language`, { interval: 500, origin: 'right', delay: 300 });
-      this.scrollReveal.reveal(`section#skills .experience`, { interval: 500, origin: 'left' });
-      this.scrollReveal.reveal(`section#skills .studying`, { interval: 500, origin: 'right', delay: 300 });
+      this.scrollReveal.reveal(`section#about .content .text`, { interval: 500, origin: 'top' });
+      this.scrollReveal.reveal(`section#about .content .imagem`, { interval: 500, origin: 'bottom', delay: 300 });
+      this.scrollReveal.reveal(`section#resume #experience`, { interval: 500, origin: 'top' });
+      this.scrollReveal.reveal(`section#resume #education`, { interval: 500, origin: 'bottom', delay: 300 });
+      this.scrollReveal.reveal(`section#resume #certification`, { interval: 500, origin: 'top' });
+      this.scrollReveal.reveal(`section#resume #language`, { interval: 500, origin: 'bottom', delay: 300 });
+      this.scrollReveal.reveal(`section#skills .experience`, { interval: 500, origin: 'top' });
+      this.scrollReveal.reveal(`section#skills .studying`, { interval: 500, origin: 'bottom', delay: 300 });
       this.scrollReveal.reveal(`section#projects > div`, { interval: 500 });
-      this.scrollReveal.reveal(`section#contact .text`, { interval: 500, origin: 'left' });
-      // this.scrollReveal.reveal(`section#contact form`, { interval: 500, origin: 'bottom', delay: 300 });
+      this.scrollReveal.reveal(`section#contact .text`, { interval: 500, origin: 'top' });
+      this.scrollReveal.reveal(`section#contact form`, { interval: 500, origin: 'bottom', delay: 300 });
     }
   }
 }
