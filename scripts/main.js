@@ -54,7 +54,7 @@ const Libs = {
   scrollRevealLib: {
     scrollReveal: ScrollReveal({ // ScrollReveal(options I want to use instead of the defaults)
       origin: 'bottom',
-      distance: '5px',
+      distance: '8px',
       duration: 1000,
       reset: true,
     }),
