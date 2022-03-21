@@ -49,7 +49,7 @@ html.light-mode {
   --border-color: #333333;
   --border-box-color: rgb(55, 0, 255);
   --scroll-border: rgba(0, 0, 0, .3);
-  --background-color: #FFFFFF;
+  --background-color: #2121211A;
 }
 
 :root {
@@ -79,6 +79,7 @@ body {
 .title {
   margin: auto;
   font-size: 1.8rem;
+  font-family: var(--title-font);
 }
 .nav {
   font: 400 1rem var(--body-font);
@@ -275,7 +276,7 @@ nav ul li a.active::after {
 }
 
 .ball.moon {
-  transform: translateX(3.7rem);
+  transform: translateX(3.9rem);
 }
 
 .wrapper-toggle #moon:hover {
@@ -377,6 +378,7 @@ main {
   display: flex;
   flex-direction: row; 
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 .icons img {
   width: 2.7rem;
@@ -515,8 +517,11 @@ section#resume .innerBox a img {
 
 /* --- TECNOLOGIAS --- */
 section#skills .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
 }
 section#skills .content .wrapperSkills {
   display: flex;
@@ -524,6 +529,7 @@ section#skills .content .wrapperSkills {
   gap: 3rem;
   margin-top: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 section#skills .content .eachSkill {
   display: flex;
@@ -572,6 +578,17 @@ section#skills .content .circle img#jquery {
   width: 5rem;
   transform: translateY(-6%);
 }
+section#skills .content .circle img#webpack {
+  width: 5rem;
+  transform: translateY(-6%);
+}
+section#skills .content .circle img#firebase {
+  width: 5rem;
+  transform: translateY(-6%);
+}
+section#skills .content .circle img#nodejs {
+  transform: translateY(+5%);
+}
 
 /* --- PROJECTS --- */
 section#projects .content {
@@ -597,6 +614,9 @@ section#projects .content .square .smallSquare img {
   cursor: pointer;
 
   transition: .4s;
+}
+section#projects .content .square .smallSquare img:hover {
+  transform: scale(1.1);
 }
 section#projects .content .square:hover {
   border: 1px solid var(--border-box-color);
@@ -804,7 +824,7 @@ div.back-to-top img {
   }
   section#home .container #shapeHome #description .icons {
     position: absolute;
-    transform: translate(+95%, +20%);
+    transform: translate(+95%, +85%);
   }
   section#home .container #shapeHome #shapeProfile {
     flex-direction: row;

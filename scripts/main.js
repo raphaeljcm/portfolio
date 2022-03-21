@@ -271,15 +271,15 @@ function changeColorLink() {
 }
 
 function backToTopButton() {
-  const backToTopButton = document.querySelector('#back-to-top');
+  const backToTopElement = document.querySelector('#back-to-top');
 
   if(window.scrollY >= 2500) {
-    backToTopButton.classList.add(MENU);
+    backToTopElement.classList.add(MENU);
   } else {
-    backToTopButton.classList.remove(MENU);
+    backToTopElement.classList.remove(MENU);
   }
 
-  backToTopButton.addEventListener('click', () => {
+  backToTopElement.addEventListener('click', () => {
     window.scrollTo({
       top: 0
     });
@@ -352,13 +352,16 @@ function checkLanguage() {
 function changingIconsColor(theme) {
   const menuIcon = document.querySelector('#menu-icon');
   const closeIcon = document.querySelector('#close-icon');
+  const backToTopImage = document.querySelector('#back-to-top-image');
 
   if(theme === 'light-mode') {
     menuIcon.setAttribute('src', './assets/hamburguer-icon-light.svg');
     closeIcon.setAttribute('src', './assets/close-light.svg');
+    backToTopImage.setAttribute('src', './assets/arrow-up.svg');
   } else {
     menuIcon.setAttribute('src', './assets/hamburguer-icon.svg');
     closeIcon.setAttribute('src', './assets/close.svg');
+    backToTopImage.setAttribute('src', './assets/arrow-up-light.svg');
   }
 }
 
