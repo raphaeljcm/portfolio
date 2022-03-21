@@ -507,6 +507,7 @@ section#resume .innerBox a {
   color: var(--text-color);
   display: inline-flex;
   align-items: center;
+  width: fit-content;
 }
 section#resume .innerBox a img {
   width: 1rem;
