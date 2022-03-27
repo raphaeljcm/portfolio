@@ -592,6 +592,9 @@ section#skills .content .circle img#firebase {
 section#skills .content .circle img#nodejs {
   transform: translateY(+5%);
 }
+section#skills .content .circle img#mongo {
+  transform: translateY(+3%);
+}
 
 /* --- PROJECTS --- */
 section#projects .content {
