@@ -595,6 +595,9 @@ section#skills .content .circle img#nodejs {
 section#skills .content .circle img#mongo {
   transform: translateY(+3%);
 }
+section#skills .content .circle img#typescript {
+  transform: translateY(+3%);
+}
 
 /* --- PROJECTS --- */
 section#projects .content {

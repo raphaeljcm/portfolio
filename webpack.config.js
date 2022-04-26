@@ -1,7 +1,7 @@
 const modoDev = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new OptimizeCSSAssetsWebpackPlugin({})
+      new CssMinimizerPlugin({})
     ]
   },
   module: {
