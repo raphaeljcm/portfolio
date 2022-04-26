@@ -94,6 +94,9 @@ body {
 }
 .subText-project {
   color: var(--text-color-projects);
+  word-break: break-word;
+  max-width: 20rem;
+  text-align: center;
 }
 .container {
   width: 85vw;
