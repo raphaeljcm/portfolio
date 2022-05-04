@@ -294,9 +294,6 @@ nav ul li a.active::after {
 }
 
 /* --- HOME --- */
-main {
-  padding-top: calc(var(--header-height) + 2rem);
-}
 #hidden {
   visibility: 0;
   opacity: 0;
