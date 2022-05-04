@@ -395,7 +395,8 @@ main {
 
 /* --- ABOUT ME --- */
 section {
-  margin: 10rem auto 0 auto;
+  padding-top: 10rem;
+  margin-inline: auto;
 }
 section header {
   text-align: center;
