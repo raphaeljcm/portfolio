@@ -861,13 +861,6 @@ div.back-to-top img {
     max-width: 25rem;
   }
 }
-
-@media screen and (max-width: 1024px) {
-  section#home {
-    margin: 5rem auto 0 auto;
-  }
-}
-
 @media screen and (max-width: 860px) { 
   #mainHeader .container #menu {
     opacity: 0;
@@ -979,7 +972,6 @@ div.back-to-top img {
     height: 2rem;
   }
   section#home {
-    margin: 10rem auto 0 auto;
     animation: 1.5s ease moveHomeCellphone;
   }
   section#home .container {
