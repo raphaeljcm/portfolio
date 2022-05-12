@@ -598,6 +598,8 @@ section#skills .content .circle img#mongo {
 }
 section#skills .content .circle img#typescript {
   transform: translateY(+3%);
+}section#skills .content .circle img#react {
+  transform: translateY(+2%);
 }
 
 /* --- PROJECTS --- */
