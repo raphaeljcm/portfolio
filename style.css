@@ -588,7 +588,7 @@ section#skills .content .circle img#typescript {
   transform: translateY(+3%);
 }
 section#skills .content .circle img#react,
-section#skills.content .circle img#react-native {
+section#skills .content .circle img#react-native {
   transform: translateY(+2%);
 }
 
