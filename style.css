@@ -574,31 +574,21 @@ section#skills .content .circle img#mysql {
   width: 7rem;
   transform: translateY(-6%);
 }
-section#skills .content .circle img#mysql {
-  width: 7rem;
-  transform: translateY(-6%);
-}
-section#skills .content .circle img#jquery {
-  width: 5rem;
-  transform: translateY(-6%);
-}
-section#skills .content .circle img#webpack {
-  width: 5rem;
-  transform: translateY(-6%);
-}
-section#skills .content .circle img#firebase {
+section#skills .content .circle img#firebase,
+section#skills .content .circle img#webpack,
+section#skills .content .circle img#jquery,{
   width: 5rem;
   transform: translateY(-6%);
 }
 section#skills .content .circle img#nodejs {
   transform: translateY(+5%);
 }
-section#skills .content .circle img#mongo {
-  transform: translateY(+3%);
-}
+section#skills .content .circle img#mongo,
 section#skills .content .circle img#typescript {
   transform: translateY(+3%);
-}section#skills .content .circle img#react {
+}
+section#skills .content .circle img#react,
+section#skills.content.circle img#react-native {
   transform: translateY(+2%);
 }
 
