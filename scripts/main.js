@@ -413,6 +413,13 @@ function changingIconsColor(theme) {
   }
 }
 
+function setCurrentDate() {
+  const span = document.querySelector('#current-year');
+  const currentDate = new Date().getFullYear();
+
+  span.textContent = currentDate;
+}
+
 // STARTING EVERYTHING!
 function init() {
   scrollEffects();
@@ -421,6 +428,7 @@ function init() {
   changeColorLink();
   timeSwitcher();
   checkLanguage();
+  setCurrentDate();
   toggleMenu();
   removeMenu();
   Libs.scrollRevealLib.startReveal();

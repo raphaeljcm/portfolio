@@ -576,7 +576,7 @@ section#skills .content .circle img#mysql {
 }
 section#skills .content .circle img#firebase,
 section#skills .content .circle img#webpack,
-section#skills .content .circle img#jquery,{
+section#skills .content .circle img#jquery {
   width: 5rem;
   transform: translateY(-6%);
 }
@@ -737,7 +737,7 @@ footer {
 footer:hover {
   color: var(--tertiary-color);
 }
-footer span {
+footer span:last-of-type {
   background-image: url("./assets/coffee.svg");
   background-repeat: no-repeat;
   height: 100%;
@@ -747,7 +747,7 @@ footer span {
 
   transform: translateY(+14%);
 }
-html.light-mode footer span {
+html.light-mode footer span:last-of-type {
   filter: invert(100%);
 }
 
