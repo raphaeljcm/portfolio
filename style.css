@@ -562,34 +562,17 @@ section#skills .content .circle img {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
-section#skills .content .circle img:hover {
-  filter: none;
-  animation: jumping .5s ease-in-out;
-}
-section#skills .content .circle img#js {
-  width: 5rem;
-  transform: translateY(-5%);
-}
-section#skills .content .circle img#mysql {
-  width: 7rem;
-  transform: translateY(-6%);
-}
-section#skills .content .circle img#firebase,
-section#skills .content .circle img#webpack,
-section#skills .content .circle img#jquery {
-  width: 5rem;
-  transform: translateY(-6%);
-}
-section#skills .content .circle img#nodejs {
+section#skills .content .circle img#nodejs,
+section#skills .content .circle img#jest {
   transform: translateY(+5%);
 }
-section#skills .content .circle img#mongo,
-section#skills .content .circle img#typescript {
+section#skills .content .circle img#typescript,
+section#skills .content .circle img#react,
+section#skills .content .circle img#graphql {
   transform: translateY(+3%);
 }
-section#skills .content .circle img#react,
-section#skills .content .circle img#react-native {
-  transform: translateY(+2%);
+section#skills .content .circle img#next {
+  transform: translateY(+11%);
 }
 
 /* --- PROJECTS --- */
