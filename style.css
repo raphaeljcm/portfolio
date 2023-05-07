@@ -566,6 +566,9 @@ section#skills .content .circle img:hover {
   filter: none;
   animation: jumping .5s ease-in-out;
 }
+section#skills .content .circle img#jest {
+  width: 4.6rem;
+}
 section#skills .content .circle img#nodejs,
 section#skills .content .circle img#jest {
   transform: translateY(+5%);
@@ -577,6 +580,7 @@ section#skills .content .circle img#graphql {
 }
 section#skills .content .circle img#next {
   transform: translateY(+11%);
+  width: 4rem;
 }
 
 /* --- PROJECTS --- */
