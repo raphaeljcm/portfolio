@@ -562,6 +562,10 @@ section#skills .content .circle img {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
+section#skills .content .circle img:hover {
+  filter: none;
+  animation: jumping .5s ease-in-out;
+}
 section#skills .content .circle img#nodejs,
 section#skills .content .circle img#jest {
   transform: translateY(+5%);
