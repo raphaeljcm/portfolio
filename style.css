@@ -426,6 +426,10 @@ section#about .imagem {
   display: flex;
   justify-content: center;
 }
+section#about .imagem #programmingImg {
+  height: 22rem;
+  object-fit: cover;
+}
 
 /* --- RESUME --- */
 section#resume .wrapperBox {
