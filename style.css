@@ -577,6 +577,9 @@ section#skills .content .circle img#nodejs,
 section#skills .content .circle img#jest {
   transform: translateY(+5%);
 }
+section#skills .content .circle img#zustand {
+  transform: translateX(0);
+}
 section#skills .content .circle img#typescript,
 section#skills .content .circle img#react,
 section#skills .content .circle img#graphql {
