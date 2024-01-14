@@ -570,11 +570,13 @@ section#skills .content .circle img:hover {
   filter: none;
   animation: jumping .5s ease-in-out;
 }
-section#skills .content .circle img#jest {
+section#skills .content .circle img#jest,
+section#skills .content .circle img#storybook {
   width: 4.6rem;
 }
 section#skills .content .circle img#nodejs,
-section#skills .content .circle img#jest {
+section#skills .content .circle img#jest,
+section#skills .content .circle img#storybook {
   transform: translateY(+5%);
 }
 section#skills .content .circle img#zustand {
