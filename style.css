@@ -591,6 +591,9 @@ section#skills .content .circle img#next {
   transform: translateY(+11%);
   width: 4rem;
 }
+section#skills .content .circle img#react-native {
+  transform: translateY(0);
+}
 
 /* --- PROJECTS --- */
 section#projects .content {
