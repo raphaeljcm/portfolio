@@ -591,7 +591,8 @@ section#skills .content .circle img#next {
   transform: translateY(+11%);
   width: 4rem;
 }
-section#skills .content .circle img#react-native {
+section#skills .content .circle img#react-native,
+section#skills .content .circle img#python {
   transform: translateY(0);
 }
 
