@@ -517,7 +517,7 @@ section#resume .innerBox .role-wrapper::after {
   content: '';
   position: absolute;
   width: 2px;
-  height: 5.3rem;
+  height: 6.6rem;
   left: calc(-2rem + 3px);
   top: 1.3rem;
   background-color: var(--text-color);
@@ -891,7 +891,7 @@ div.back-to-top img {
     content: '';
     position: absolute;
     width: 2px;
-    height: 6.3rem;
+    height: 7.6rem;
     left: calc(-2rem + 3px);
     top: 1.3rem;
     background-color: var(--text-color);
@@ -905,17 +905,6 @@ div.back-to-top img {
   }
   section#contact .content .text {
     max-width: 25rem;
-  }
-}
-@media screen and (max-width: 1369px) {
-  section#resume .innerBox .role-wrapper::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 6.3rem;
-    left: calc(-2rem + 3px);
-    top: 1.3rem;
-    background-color: var(--text-color);
   }
 }
 @media screen and (max-width: 860px) { 
@@ -997,7 +986,7 @@ div.back-to-top img {
     content: '';
     position: absolute;
     width: 2px;
-    height: 6.3rem;
+    height: 7.8rem;
     left: calc(-2rem + 3px);
     top: 1.3rem;
     background-color: var(--text-color);
@@ -1031,7 +1020,7 @@ div.back-to-top img {
     content: '';
     position: absolute;
     width: 2px;
-    height: 6.3rem;
+    height: 7.8rem;
     left: calc(-2rem + 3px);
     top: 1.3rem;
     background-color: var(--text-color);
@@ -1090,7 +1079,7 @@ div.back-to-top img {
     content: '';
     position: absolute;
     width: 2px;
-    height: 9.3rem;
+    height: 11rem;
     left: calc(-2rem + 3px);
     top: 1.3rem;
     background-color: var(--text-color);
