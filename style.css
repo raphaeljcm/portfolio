@@ -348,7 +348,6 @@ nav ul li a.active::after {
   color: var(--primary-color);
   background-color: var(--tertiary-color);
   padding: .8rem 1.4rem;
-  margin-top: 1rem;
   border-radius: 2rem;
   transition: .5s; 
 }
@@ -466,7 +465,7 @@ section#resume .innerBox {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: .3rem;
+  gap: .4rem;
 }
 section#resume .innerBox::before {
   content: "";
@@ -500,6 +499,44 @@ section#resume .innerBox h4 {
 }
 section#resume .innerBox p {
   color: var(--text-color);
+}
+section#resume .innerBox .role-wrapper {
+  position: relative;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+section#resume .innerBox .role-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+section#resume .innerBox .role-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 5.3rem;
+  left: calc(-2rem + 3px);
+  top: 1.3rem;
+  background-color: var(--text-color);
+}
+section#resume .innerBox .role-container .role.active::before {
+  content: "";
+  position: absolute;
+  width: .5rem;
+  height: .5rem;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  top: 0.3rem;
+  left: -2rem;
+}
+section#resume .innerBox h5 {
+  font-size: 14px;
+}
+section#resume .innerBox p {
+  font-size: 13px;
 }
 section#resume .innerBox#brazil::before {
   background-image: url("./assets/brazil.svg");
@@ -579,7 +616,8 @@ section#skills .content .circle img#jest,
 section#skills .content .circle img#storybook {
   transform: translateY(+5%);
 }
-section#skills .content .circle img#zustand {
+section#skills .content .circle img#zustand,
+section#skills .content .circle img#docker {
   transform: translateX(0);
 }
 section#skills .content .circle img#typescript,
@@ -772,6 +810,9 @@ div.back-to-top img {
   height: 25px;
 }
 .back-to-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
   background-color: var(--tertiary-color);
 
   position: fixed;
@@ -846,6 +887,15 @@ div.back-to-top img {
   section#resume .content {
     width: 23.2rem;
   }
+  section#resume .innerBox .role-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 6.3rem;
+    left: calc(-2rem + 3px);
+    top: 1.3rem;
+    background-color: var(--text-color);
+  }
   section#skills .content {
     grid-template: repeat(2, auto) / repeat(1, auto);
     justify-content: center;
@@ -855,6 +905,17 @@ div.back-to-top img {
   }
   section#contact .content .text {
     max-width: 25rem;
+  }
+}
+@media screen and (max-width: 1369px) {
+  section#resume .innerBox .role-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 6.3rem;
+    left: calc(-2rem + 3px);
+    top: 1.3rem;
+    background-color: var(--text-color);
   }
 }
 @media screen and (max-width: 860px) { 
@@ -932,6 +993,15 @@ div.back-to-top img {
   section#resume .box {
     height: 15rem;
   }
+  section#resume .innerBox .role-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 6.3rem;
+    left: calc(-2rem + 3px);
+    top: 1.3rem;
+    background-color: var(--text-color);
+  }
   section#skills .content .circle img {
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
@@ -956,6 +1026,15 @@ div.back-to-top img {
   section#about .content .imagem {
     order: 0;
     margin-bottom: 60px;
+  }
+  section#resume .innerBox .role-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 6.3rem;
+    left: calc(-2rem + 3px);
+    top: 1.3rem;
+    background-color: var(--text-color);
   }
 }
 
@@ -1007,6 +1086,16 @@ div.back-to-top img {
     grid-template: none;
   } 
 
+  section#resume .innerBox .role-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 9.3rem;
+    left: calc(-2rem + 3px);
+    top: 1.3rem;
+    background-color: var(--text-color);
+  }
+
   section#skills .content .wrapperSkills {
     flex-wrap: wrap;
   }
@@ -1037,5 +1126,23 @@ div.back-to-top img {
   footer {
     margin-top: 3rem;
     font-size: .9rem;
+  }
+  
+  @media screen and (max-width: 320px) {
+    section#home .container #shapeHome #description .content h2 {
+      font-size: 2rem;
+    }
+    section#home .container #shapeHome #description .content .subText {
+      font-size: 1rem;
+    }
+    section#home .container .content h1 {
+      font-size: 1.2rem;
+    }
+    section#home .container .content .typeWritter {
+      font-size: 1rem;
+    }
+    #shapeProfile .content a.button {
+      padding: 0.8rem 1rem;
+    }
   }
 }
