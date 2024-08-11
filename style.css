@@ -426,8 +426,8 @@ section#about .imagem {
   justify-content: center;
 }
 section#about .imagem #programmingImg {
-  height: 22rem;
-  object-fit: cover;
+  height: 40rem;
+  object-fit: contain;
 }
 
 /* --- RESUME --- */
