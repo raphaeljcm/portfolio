@@ -517,7 +517,7 @@ section#resume .innerBox .role-wrapper::after {
   content: '';
   position: absolute;
   width: 2px;
-  height: 6.6rem;
+  height: 10.5rem;
   left: calc(-2rem + 3px);
   top: 1.3rem;
   background-color: var(--text-color);
@@ -891,7 +891,7 @@ div.back-to-top img {
     content: '';
     position: absolute;
     width: 2px;
-    height: 7.6rem;
+    height: 11.5rem;
     left: calc(-2rem + 3px);
     top: 1.3rem;
     background-color: var(--text-color);
@@ -986,7 +986,7 @@ div.back-to-top img {
     content: '';
     position: absolute;
     width: 2px;
-    height: 7.8rem;
+    height: 11.5rem;
     left: calc(-2rem + 3px);
     top: 1.3rem;
     background-color: var(--text-color);
@@ -1020,7 +1020,7 @@ div.back-to-top img {
     content: '';
     position: absolute;
     width: 2px;
-    height: 7.8rem;
+    height: 11.5rem;
     left: calc(-2rem + 3px);
     top: 1.3rem;
     background-color: var(--text-color);
@@ -1079,7 +1079,7 @@ div.back-to-top img {
     content: '';
     position: absolute;
     width: 2px;
-    height: 11rem;
+    height: 14.5rem;
     left: calc(-2rem + 3px);
     top: 1.3rem;
     background-color: var(--text-color);
