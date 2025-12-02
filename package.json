@@ -23,7 +23,7 @@
     "webpack-cli": "^4.9.2"
   },
   "bugs": {
-    "url": "https://github.com/faeelcardoso/portfolio/issues"
+    "url": "https://github.com/raphaeljcm/portfolio/issues"
   },
   "homepage": "https://raphaeljcm.github.io/portfolio/",
   "dependencies": {
